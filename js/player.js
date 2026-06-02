@@ -96,7 +96,7 @@ function createThumbnail(player) {
     "w-20 h-20 object-cover cursor-pointer border-2 border-cyan-900/60 transition-all duration-200 opacity-50 hover:opacity-90";
 
   // TODO: クリックでプレイヤーデータを読み込む
-  thumb.addEventListener("", () => loadPlayer(player.id));
+  thumb.addEventListener("click", () => loadPlayer(player.id));
   return thumb;
 }
 

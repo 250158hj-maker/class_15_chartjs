@@ -76,7 +76,7 @@ function createChart(chartConfig) {
   );
 
   // TODO: 新しいチャートを作成
-  // playerChart = new Chart(ctx, chartConfig);
+  playerChart = new Chart(ctx, chartConfig);
 }
 
 // サムネイル生成とクリックイベント
@@ -115,7 +115,7 @@ function loadPlayer(playerId) {
   if (activeThumb) activeThumb.classList.add("thumb-active");
 
   // TODO: 画像更新
-  // transitionImage(playerData.image);
+  transitionImage(playerData.image);
 
   // ID更新（4桁ゼロパディング）
   document.getElementById("hud-id").textContent = String(playerId).padStart(
@@ -135,7 +135,7 @@ function loadPlayer(playerId) {
 async function init() {
   try {
     // TODO: API URL: api/players.json
-    const uri = "";
+    const uri = "api/players.json";
     // APIからデータを取得
     const res = await fetch(uri);
     // JSONをプレイヤーリストに変換
